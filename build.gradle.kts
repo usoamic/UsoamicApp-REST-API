@@ -1,4 +1,5 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import io.usoamic.dependencies.*
 
 plugins {
     id("org.springframework.boot") version "2.5.2"
@@ -23,21 +24,21 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter-data-jpa")
-    implementation("org.springframework.boot:spring-boot-starter-jooq")
-    implementation("org.springframework.boot:spring-boot-starter-security")
-    implementation("org.springframework.boot:spring-boot-starter-validation")
-    implementation("org.springframework.boot:spring-boot-starter-web")
-    implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
-    implementation("org.flywaydb:flyway-core")
-    implementation("org.jetbrains.kotlin:kotlin-reflect")
-    implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
-    implementation("org.liquibase:liquibase-core")
-    developmentOnly("org.springframework.boot:spring-boot-devtools")
-    runtimeOnly("org.postgresql:postgresql")
-    annotationProcessor("org.springframework.boot:spring-boot-configuration-processor")
-    testImplementation("org.springframework.boot:spring-boot-starter-test")
-    testImplementation("org.springframework.security:spring-security-test")
+    implementation(Dependencies.SpringBoot.Starter.dataJpa)
+    implementation(Dependencies.SpringBoot.Starter.jooq)
+    implementation(Dependencies.SpringBoot.Starter.security)
+    implementation(Dependencies.SpringBoot.Starter.validation)
+    implementation(Dependencies.SpringBoot.Starter.web)
+    implementation(Dependencies.Other.jacksonKotlin)
+    implementation(Dependencies.Other.flywayCore)
+    implementation(Dependencies.Kotlin.reflect)
+    implementation(Dependencies.Kotlin.stdLibJDK8)
+    implementation(Dependencies.Database.liquibaseCore)
+    developmentOnly(Dependencies.SpringBoot.devTools)
+    runtimeOnly(Dependencies.Database.postgre)
+    annotationProcessor(Dependencies.SpringBoot.configurationProcessor)
+    testImplementation(Dependencies.SpringBoot.Starter.test)
+    testImplementation(Dependencies.Spring.securityTest)
 }
 
 tasks.withType<KotlinCompile> {
