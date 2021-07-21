@@ -10,7 +10,7 @@ plugins {
 }
 
 group = "io.usoamic"
-version = "0.0.1-SNAPSHOT"
+version = "1.0.0-SNAPSHOT"
 java.sourceCompatibility = JavaVersion.VERSION_11
 
 configurations {
@@ -30,10 +30,10 @@ dependencies {
     implementation(Dependencies.SpringBoot.Starter.validation)
     implementation(Dependencies.SpringBoot.Starter.web)
     implementation(Dependencies.Other.jacksonKotlin)
-    implementation(Dependencies.Other.flywayCore)
+    implementation(Dependencies.Database.flywayCore)
+    implementation(Dependencies.Database.hibernate)
     implementation(Dependencies.Kotlin.reflect)
     implementation(Dependencies.Kotlin.stdLibJDK8)
-    implementation(Dependencies.Database.liquibaseCore)
     developmentOnly(Dependencies.SpringBoot.devTools)
     runtimeOnly(Dependencies.Database.postgre)
     annotationProcessor(Dependencies.SpringBoot.configurationProcessor)

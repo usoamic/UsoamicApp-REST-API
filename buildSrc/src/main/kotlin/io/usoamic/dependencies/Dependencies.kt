@@ -26,11 +26,11 @@ object Dependencies {
 
     object Database {
         const val postgre = "org.postgresql:postgresql"
-        const val liquibaseCore = "org.liquibase:liquibase-core"
+        const val flywayCore = "org.flywaydb:flyway-core"
+        const val hibernate = "org.hibernate:hibernate-core:${Versions.Database.hibernate}"
     }
 
     object Other {
-        const val flywayCore = "org.flywaydb:flyway-core"
         const val jacksonKotlin = "com.fasterxml.jackson.module:jackson-module-kotlin"
     }
 }
