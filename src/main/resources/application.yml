@@ -1,0 +1,27 @@
+spring:
+  jmx:
+    enabled: false
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/usoamicapp-db
+    driverClassName: org.postgresql.Driver
+    username: usoamicapp-user
+    password: usoamicapp-password
+
+  flyway:
+    enabled: true
+    baselineOnMigrate: true
+    schemas: usoamicapp
+
+  jpa:
+    hibernate.ddl-auto: validate
+    show-sql: false
+
+server:
+  port: 8090
+
+logging:
+  file:
+    path: ./
+    name: usoamicapp.log
+  org.hibernate: INFO
