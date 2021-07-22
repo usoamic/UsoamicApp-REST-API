@@ -26,7 +26,8 @@ repositories {
 dependencies {
     implementation(Dependencies.SpringBoot.Starter.dataJpa)
     implementation(Dependencies.SpringBoot.Starter.jooq)
-    implementation(Dependencies.SpringBoot.Starter.security)
+    implementation(Dependencies.Documentation.SpringFox.starter)
+    implementation(Dependencies.Documentation.SpringFox.ui)
     implementation(Dependencies.SpringBoot.Starter.validation)
     implementation(Dependencies.SpringBoot.Starter.web)
     implementation(Dependencies.Other.jacksonKotlin)
@@ -35,7 +36,7 @@ dependencies {
     implementation(Dependencies.Kotlin.reflect)
     implementation(Dependencies.Kotlin.stdLibJDK8)
     developmentOnly(Dependencies.SpringBoot.devTools)
-    runtimeOnly(Dependencies.Database.postgre)
+    runtimeOnly(Dependencies.Database.postgresql)
     annotationProcessor(Dependencies.SpringBoot.configurationProcessor)
     testImplementation(Dependencies.SpringBoot.Starter.test)
     testImplementation(Dependencies.Spring.securityTest)

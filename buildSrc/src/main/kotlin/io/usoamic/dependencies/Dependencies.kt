@@ -19,13 +19,20 @@ object Dependencies {
         const val devTools = "org.springframework.boot:spring-boot-devtools"
     }
 
+    object Documentation {
+        object SpringFox {
+            const val starter = "io.springfox:springfox-boot-starter:${Versions.Documentation.SpringFox.starter}"
+            const val ui = "io.springfox:springfox-swagger-ui:${Versions.Documentation.SpringFox.ui}"
+        }
+    }
+
     object Kotlin {
         const val reflect = "org.jetbrains.kotlin:kotlin-reflect"
         const val stdLibJDK8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     }
 
     object Database {
-        const val postgre = "org.postgresql:postgresql"
+        const val postgresql = "org.postgresql:postgresql"
         const val flywayCore = "org.flywaydb:flyway-core"
         const val hibernate = "org.hibernate:hibernate-core:${Versions.Database.hibernate}"
     }

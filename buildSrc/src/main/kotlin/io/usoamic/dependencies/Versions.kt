@@ -7,4 +7,12 @@ object Versions {
         const val hibernate = "5.5.4.Final"
     }
 
+    object Documentation {
+        object SpringFox {
+            const val starter = "3.0.0"
+            const val ui = "2.9.2"
+        }
+
+    }
+
 }
