@@ -15,4 +15,8 @@ object Versions {
 
     }
 
+    object Test {
+        const val mockk = "1.12.0"
+    }
+
 }

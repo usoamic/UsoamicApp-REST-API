@@ -31,6 +31,10 @@ object Dependencies {
         const val stdLibJDK8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     }
 
+    object Test {
+        const val mockk = "io.mockk:mockk:${Versions.Test.mockk}"
+    }
+
     object Database {
         const val postgresql = "org.postgresql:postgresql"
         const val flywayCore = "org.flywaydb:flyway-core"

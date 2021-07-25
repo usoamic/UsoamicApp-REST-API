@@ -39,6 +39,7 @@ dependencies {
     runtimeOnly(Dependencies.Database.postgresql)
     annotationProcessor(Dependencies.SpringBoot.configurationProcessor)
     testImplementation(Dependencies.SpringBoot.Starter.test)
+    testImplementation(Dependencies.Test.mockk)
     testImplementation(Dependencies.Spring.securityTest)
 }
 
