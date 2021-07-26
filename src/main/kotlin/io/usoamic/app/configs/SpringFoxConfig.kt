@@ -1,4 +1,4 @@
-package io.usoamic.app.config
+package io.usoamic.app.configs
 
 import org.springframework.context.annotation.Bean
 import org.springframework.context.annotation.Configuration
