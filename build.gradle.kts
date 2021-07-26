@@ -5,6 +5,7 @@ plugins {
     id("org.springframework.boot") version "2.5.2"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
     kotlin("jvm") version "1.5.20"
+    kotlin("kapt") version "1.5.20"
     kotlin("plugin.spring") version "1.5.20"
     kotlin("plugin.jpa") version "1.5.20"
 }
@@ -19,11 +20,18 @@ configurations {
     }
 }
 
+kapt {
+    generateStubs = true
+}
+
 repositories {
     mavenCentral()
 }
 
 dependencies {
+    /*
+     * Implementations
+     */
     implementation(Dependencies.SpringBoot.Starter.dataJpa)
     implementation(Dependencies.SpringBoot.Starter.jooq)
     implementation(Dependencies.Documentation.SpringFox.starter)
@@ -35,9 +43,29 @@ dependencies {
     implementation(Dependencies.Database.hibernate)
     implementation(Dependencies.Kotlin.reflect)
     implementation(Dependencies.Kotlin.stdLibJDK8)
+    implementation(Dependencies.Java.inject)
+    implementation(Dependencies.Mapping.mapStruct)
+    kapt(Dependencies.Mapping.mapStructProcessor)
+
+    /*
+     * DevelopmentOnly
+     */
     developmentOnly(Dependencies.SpringBoot.devTools)
+
+    /*
+     * RuntimeOnly
+     */
     runtimeOnly(Dependencies.Database.postgresql)
+
+    /*
+     * AnnotationProcessor
+     */
     annotationProcessor(Dependencies.SpringBoot.configurationProcessor)
+
+
+    /*
+     * TestImplementation
+     */
     testImplementation(Dependencies.SpringBoot.Starter.test)
     testImplementation(Dependencies.Test.mockk)
     testImplementation(Dependencies.Spring.securityTest)
