@@ -19,6 +19,10 @@ object Dependencies {
         const val devTools = "org.springframework.boot:spring-boot-devtools"
     }
 
+    object Java {
+        const val inject = "javax.inject:javax.inject:1"
+    }
+
     object Documentation {
         object SpringFox {
             const val starter = "io.springfox:springfox-boot-starter:${Versions.Documentation.SpringFox.starter}"
@@ -39,6 +43,11 @@ object Dependencies {
         const val postgresql = "org.postgresql:postgresql"
         const val flywayCore = "org.flywaydb:flyway-core"
         const val hibernate = "org.hibernate:hibernate-core:${Versions.Database.hibernate}"
+    }
+
+    object Mapping {
+        const val mapStruct = "org.mapstruct:mapstruct:${Versions.Mapping.mapStruct}"
+        const val mapStructProcessor = "org.mapstruct:mapstruct-processor:${Versions.Mapping.mapStruct}"
     }
 
     object Other {

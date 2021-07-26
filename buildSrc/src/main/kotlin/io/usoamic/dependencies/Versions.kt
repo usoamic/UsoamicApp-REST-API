@@ -19,4 +19,7 @@ object Versions {
         const val mockk = "1.12.0"
     }
 
+    object Mapping {
+        const val mapStruct = "1.4.2.Final"
+    }
 }
