@@ -1,9 +1,10 @@
-package io.usoamic.app.models.network
+package io.usoamic.app.models.data
 
 import java.util.*
 
-data class UserEntity(
+data class UserModel(
     val userId: UUID,
     val privateKey: String,
     val phone: String
+
 )
