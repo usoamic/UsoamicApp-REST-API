@@ -14,8 +14,9 @@ spring:
     schemas: usoamicapp
 
   jpa:
-    hibernate.ddl-auto: validate
+    hibernate.ddl-auto: validate # none
     show-sql: false
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
 
 server:
   port: 8090
