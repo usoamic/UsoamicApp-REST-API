@@ -2,7 +2,7 @@ package io.usoamic.app.mappers
 
 import io.usoamic.app.models.data.AddUserModel
 import io.usoamic.app.models.data.UserModel
-import io.usoamic.app.models.db.UsersDbEntity
+import io.usoamic.app.models.db.UserDbEntity
 import io.usoamic.app.models.network.request.AddUserRequest
 import io.usoamic.app.models.network.response.UserDtoEntity
 import org.mapstruct.Mapper
@@ -14,11 +14,11 @@ interface UserMapper {
      * User
      */
     fun modelToDto(model: UserModel): UserDtoEntity
-    fun dbToModel(db: UsersDbEntity): UserModel
+    fun dbToModel(db: UserDbEntity): UserModel
 
     /*
      * AddUser
      */
     fun addUserRequestToModel(request: AddUserRequest): AddUserModel
-    fun addUserModelToDb(model: AddUserModel): UsersDbEntity
+    fun addUserModelToDb(model: AddUserModel): UserDbEntity
 }
