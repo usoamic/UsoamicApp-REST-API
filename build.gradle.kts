@@ -34,17 +34,25 @@ dependencies {
      */
     implementation(Dependencies.SpringBoot.Starter.dataJpa)
     implementation(Dependencies.SpringBoot.Starter.jooq)
-    implementation(Dependencies.Documentation.SpringFox.starter)
-    implementation(Dependencies.Documentation.SpringFox.ui)
     implementation(Dependencies.SpringBoot.Starter.validation)
     implementation(Dependencies.SpringBoot.Starter.web)
-    implementation(Dependencies.Other.jacksonKotlin)
-    implementation(Dependencies.Database.flywayCore)
-    implementation(Dependencies.Database.hibernate)
+    implementation(Dependencies.Java.inject)
     implementation(Dependencies.Kotlin.reflect)
     implementation(Dependencies.Kotlin.stdLibJDK8)
-    implementation(Dependencies.Java.inject)
+    implementation(Dependencies.Usoamic.kt)
+    implementation(Dependencies.Usoamic.commonsKtCrossPlatform)
+    implementation(Dependencies.Usoamic.validateUtilKt)
+    implementation(Dependencies.Cryptocurrency.web3j)
+    implementation(Dependencies.Documentation.SpringFox.starter)
+    implementation(Dependencies.Documentation.SpringFox.ui)
+    implementation(Dependencies.Database.flywayCore)
+    implementation(Dependencies.Database.hibernate)
     implementation(Dependencies.Mapping.mapStruct)
+    implementation(Dependencies.Other.jacksonKotlin)
+
+    /*
+     * Kapt
+     */
     kapt(Dependencies.Mapping.mapStructProcessor)
 
     /*

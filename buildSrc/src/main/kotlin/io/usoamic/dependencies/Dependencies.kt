@@ -23,16 +23,26 @@ object Dependencies {
         const val inject = "javax.inject:javax.inject:1"
     }
 
+    object Kotlin {
+        const val reflect = "org.jetbrains.kotlin:kotlin-reflect"
+        const val stdLibJDK8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+    }
+
+    object Usoamic {
+        const val kt = "com.github.usoamic:usoamickt:v${Versions.Usoamic.kt}"
+        const val validateUtilKt = "com.github.usoamic:validateutil:v${Versions.Usoamic.validateUtilKt}"
+        const val commonsKtCrossPlatform = "com.github.usoamic:usoamic-commons-crossplatform:v${Versions.Usoamic.commonsKtCrossPlatform}"
+    }
+
+    object Cryptocurrency {
+        const val web3j = "org.web3j:core:${Versions.Cryptocurrency.web3j}"
+    }
+
     object Documentation {
         object SpringFox {
             const val starter = "io.springfox:springfox-boot-starter:${Versions.Documentation.SpringFox.starter}"
             const val ui = "io.springfox:springfox-swagger-ui:${Versions.Documentation.SpringFox.ui}"
         }
-    }
-
-    object Kotlin {
-        const val reflect = "org.jetbrains.kotlin:kotlin-reflect"
-        const val stdLibJDK8 = "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
     }
 
     object Test {

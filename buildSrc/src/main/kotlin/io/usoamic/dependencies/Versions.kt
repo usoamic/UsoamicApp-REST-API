@@ -3,6 +3,16 @@ package io.usoamic.dependencies
 object Versions {
     private const val KOTLIN = "1.5.20"
 
+    object Usoamic {
+        const val kt = "1.2.2"
+        const val commonsKtCrossPlatform = "1.2.0"
+        const val validateUtilKt = "1.0.1-3"
+    }
+
+    object Cryptocurrency {
+        const val web3j = "4.6.0"
+    }
+
     object Database {
         const val hibernate = "5.5.4.Final"
     }
