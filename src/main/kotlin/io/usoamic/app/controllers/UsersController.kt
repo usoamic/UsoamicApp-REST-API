@@ -1,40 +1,30 @@
 package io.usoamic.app.controllers
 
-import io.usoamic.app.AppUrl
-import io.usoamic.app.models.network.UserEntity
-import org.springframework.http.HttpStatus
-import org.springframework.http.MediaType
-import org.springframework.web.bind.annotation.*
-import java.util.*
+import io.usoamic.app.api.UsersApi
+import io.usoamic.app.mappers.UserMapper
+import io.usoamic.app.models.network.request.AddUserRequest
+import io.usoamic.app.models.network.response.UserDtoEntity
+import io.usoamic.app.services.UserService
+import org.springframework.http.ResponseEntity
+import org.springframework.web.bind.annotation.RequestBody
+import org.springframework.web.bind.annotation.RestController
+import javax.inject.Inject
 import javax.validation.Valid
 
 @RestController
-@RequestMapping(value = ["${AppUrl.APIv1}/users"], produces = [MediaType.APPLICATION_JSON_VALUE])
-class UsersController {
-    @GetMapping
-    @ResponseStatus(code = HttpStatus.OK)
-    fun getUsers(): List<UserEntity> {
-        return listOf(
-            UserEntity(
-                userId = UUID.randomUUID(),
-                privateKey = "2",
-                phone = "3"
-            ),
-            UserEntity(
-                userId = UUID.randomUUID(),
-                privateKey = "2",
-                phone = "3"
-            )
-        )
-    }
-
-    @PostMapping
-    @ResponseStatus(code = HttpStatus.NO_CONTENT)
-    fun addUsers(@Valid @RequestBody user: UserEntity) {
+class UsersController @Inject constructor(
+    private val userService: UserService,
+    private val userMapper: UserMapper
+) : UsersApi {
+    override fun getUsers(): ResponseEntity<List<UserDtoEntity>> {
+        val list = userService.getUsers()
+            .map(userMapper::modelToDto)
+        return ResponseEntity.ok(list)
 
     }
 
-    companion object {
-        const val URL = "/"
+    override fun addUsers(@Valid @RequestBody addUserEntity: AddUserRequest) {
+        val model = userMapper.addUserRequestToModel(addUserEntity)
+        userService.addUsers(model)
     }
 }
