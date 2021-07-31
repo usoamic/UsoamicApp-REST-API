@@ -6,18 +6,18 @@ import javax.persistence.*
 @Entity
 @Table(name = "users", schema = "usoamicapp", catalog = "usoamicapp-db")
 open class UsersDbEntity {
-    @get:Id
-    @get:Column(name = "user_id", nullable = false)
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @Column(name = "user_id", unique = true, nullable = false)
     open var userId: UUID? = null
 
-    @get:Basic
-    @get:Column(name = "private_key", nullable = false)
+    @Basic
+    @Column(name = "private_key", nullable = false)
     open var privateKey: String? = null
 
-    @get:Basic
-    @get:Column(name = "phone", nullable = false)
+    @Basic
+    @Column(name = "phone", nullable = false)
     open var phone: String? = null
-
 
     override fun toString(): String =
         "Entity of type: ${javaClass.name} ( " +
