@@ -1,6 +1,6 @@
 package io.usoamic.app.repositories
 
-import io.usoamic.app.models.db.UsersDbEntity
-import org.springframework.data.repository.CrudRepository
+import io.usoamic.app.models.db.UserDbEntity
+import org.springframework.data.jpa.repository.JpaRepository
 
-interface UsersRepository : CrudRepository<UsersDbEntity, String>
+interface UsersRepository : JpaRepository<UserDbEntity, String>
