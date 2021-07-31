@@ -9,23 +9,23 @@ open class UserDbEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "user_id", unique = true, nullable = false)
-    var userId: UUID? = null
+    open var userId: UUID? = null
 
     @Basic
     @Column(name = "wallet_name", nullable = false)
-    var walletName: String? = null
+    open var walletName: String? = null
 
     @Basic
     @Column(name = "phone_number", nullable = false)
-    var phoneNumber: String? = null
+    open var phoneNumber: String? = null
 
     @Basic
     @get:Column(name = "chat_id", nullable = false)
-    var chatId: String? = null
+    open var chatId: String? = null
 
     @get:Basic
     @get:Column(name = "created_at", nullable = true)
-    var createdAt: java.sql.Timestamp? = null
+    open var createdAt: java.sql.Timestamp? = null
 
 
     override fun toString(): String =
