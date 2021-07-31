@@ -6,5 +6,4 @@ data class UserModel(
     val userId: UUID,
     val privateKey: String,
     val phone: String
-
 )
