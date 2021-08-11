@@ -1,10 +1,10 @@
 package io.usoamic.dependencies
 
 object Versions {
-    private const val KOTLIN = "1.5.20"
+    private const val KOTLIN = "1.5.21"
 
     object Usoamic {
-        const val kt = "1.2.2-desktop"
+        const val kt = "1.3.0-beta.9"
         const val commonsKtCrossPlatform = "1.2.0-desktop"
         const val validateUtilKt = "1.0.1-3"
     }

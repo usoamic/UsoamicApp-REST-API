@@ -4,10 +4,10 @@ import io.usoamic.dependencies.*
 plugins {
     id("org.springframework.boot") version "2.5.2"
     id("io.spring.dependency-management") version "1.0.11.RELEASE"
-    kotlin("jvm") version "1.5.20"
-    kotlin("kapt") version "1.5.20"
-    kotlin("plugin.spring") version "1.5.20"
-    kotlin("plugin.jpa") version "1.5.20"
+    kotlin("jvm") version "1.5.21"
+    kotlin("kapt") version "1.5.21"
+    kotlin("plugin.spring") version "1.5.21"
+    kotlin("plugin.jpa") version "1.5.21"
 }
 
 group = "io.usoamic"
