@@ -35,7 +35,6 @@ dependencies {
      * Implementations
      */
     implementation(Dependencies.SpringBoot.Starter.dataJpa)
-    implementation(Dependencies.SpringBoot.Starter.jooq)
     implementation(Dependencies.SpringBoot.Starter.validation)
     implementation(Dependencies.SpringBoot.Starter.web)
     implementation(Dependencies.Java.inject)
@@ -47,8 +46,6 @@ dependencies {
     implementation(Dependencies.Cryptocurrency.web3j)
     implementation(Dependencies.Documentation.SpringFox.starter)
     implementation(Dependencies.Documentation.SpringFox.ui)
-    implementation(Dependencies.Database.flywayCore)
-    implementation(Dependencies.Database.hibernate)
     implementation(Dependencies.Mapping.mapStruct)
     implementation(Dependencies.Other.jacksonKotlin)
 
@@ -63,15 +60,9 @@ dependencies {
     developmentOnly(Dependencies.SpringBoot.devTools)
 
     /*
-     * RuntimeOnly
-     */
-    runtimeOnly(Dependencies.Database.postgresql)
-
-    /*
      * AnnotationProcessor
      */
     annotationProcessor(Dependencies.SpringBoot.configurationProcessor)
-
 
     /*
      * TestImplementation
