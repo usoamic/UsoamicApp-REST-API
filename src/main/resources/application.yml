@@ -29,6 +29,8 @@ logging:
 
 usoamic:
   ticker: 'USO'
+  account-file-name: 'account.json'
+  wallet-password: '1234'
   date-format: 'yyyy-MM-dd HH:mm'
   node-provider: 'infura'
   network-type: 'MAINNET' #'TESTNET'
