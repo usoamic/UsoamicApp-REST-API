@@ -2,22 +2,6 @@ spring:
   jmx:
     enabled: false
 
-  datasource:
-    url: jdbc:postgresql://localhost:5432/usoamicapp-db
-    driverClassName: org.postgresql.Driver
-    username: usoamicapp-user
-    password: usoamicapp-password
-
-  flyway:
-    enabled: true
-    baselineOnMigrate: true
-    schemas: usoamicapp
-
-  jpa:
-    hibernate.ddl-auto: validate # none
-    show-sql: false
-    database-platform: org.hibernate.dialect.PostgreSQLDialect
-
 server:
   port: 8090
 
@@ -32,6 +16,6 @@ usoamic:
   account-file-name: 'account.json'
   wallet-password: '1234'
   date-format: 'yyyy-MM-dd HH:mm'
-  node-provider: 'infura'
+  node-provider: 'INFURA'
   network-type: 'MAINNET' #'TESTNET'
   project-id: 'fa8e5195184149f79e644292d2b31707'

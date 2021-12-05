@@ -16,7 +16,7 @@ class UsoamicConfig(
     private val networkType: String,
     @Value("\${usoamic.project-id}")
     private val projectId: String,
-    @Value("\${account-file-name}")
+    @Value("\${usoamic.account-file-name}")
     private val accountFileName: String
 ) {
     @Bean
@@ -25,7 +25,7 @@ class UsoamicConfig(
             fileName = accountFileName,
             filePath = DirectoryUtils.getDefaultKeyDirectory(),
             networkType = NetworkType.valueOf(networkType),
-            NodeProvider.valueOf(
+            nodeProvider = NodeProvider.valueOf(
                 provider = nodeProvider,
                 args = projectId
             )
