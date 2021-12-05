@@ -15,12 +15,14 @@ class UsoamicConfig(
     @Value("\${usoamic.network-type}")
     private val networkType: String,
     @Value("\${usoamic.project-id}")
-    private val projectId: String
+    private val projectId: String,
+    @Value("\${account-file-name}")
+    private val accountFileName: String
 ) {
     @Bean
-    fun provideContract(): Usoamic {
+    fun provideUsoamic(): Usoamic {
         return Usoamic(
-            fileName = "account.json",
+            fileName = accountFileName,
             filePath = DirectoryUtils.getDefaultKeyDirectory(),
             networkType = NetworkType.valueOf(networkType),
             NodeProvider.valueOf(
