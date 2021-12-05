@@ -15,6 +15,8 @@ class EthereumController(
     }
 
     override fun getBalance(address: String): BigDecimal {
-        return ethereumService.getBalance(address)
+        return ethereumService.getBalance(
+            address = address
+        )
     }
 }
