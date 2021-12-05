@@ -18,16 +18,27 @@ import org.mapstruct.Mappings
 )
 interface TokenMapper {
     @Mappings(
-        Mapping(target = "value", qualifiedByName = ["coinToBigDecimal"]),
-        Mapping(target = "timestamp", qualifiedByName = ["timestampToDateTime"])
+        Mapping(
+            source = "value",
+            target = "value",
+            qualifiedByName = ["coinToBigDecimal"]
+        ),
+        Mapping(
+            source = "timestamp",
+            target = "date",
+            qualifiedByName = ["timestampToDateTime"]
+        )
     )
     fun transactionEntityToDto(
         entity: TransactionEntity
     ): TransactionDto
 
     @Mappings(
-        Mapping(target = "value", qualifiedByName = ["coinToBigDecimal"]),
-        Mapping(target = "timestamp", qualifiedByName = ["timestampToDateTime"])
+        Mapping(
+            source = "timestamp",
+            target = "date",
+            qualifiedByName = ["timestampToDateTime"]
+        )
     )
     fun transactionToDto(
         transaction: Transaction

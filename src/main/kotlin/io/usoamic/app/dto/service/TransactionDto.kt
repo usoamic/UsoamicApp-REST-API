@@ -10,5 +10,5 @@ data class TransactionDto(
     val from: String,
     val to: String,
     val value: BigDecimal,
-    val timestamp: LocalDateTime
+    val date: LocalDateTime
 )

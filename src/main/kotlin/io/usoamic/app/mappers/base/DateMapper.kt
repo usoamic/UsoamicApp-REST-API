@@ -1,10 +1,7 @@
 package io.usoamic.app.mappers.base
 
-import io.usoamic.usoamickt.util.Coin
-import io.usoamic.usoamickt.util.Timestamp
 import org.mapstruct.Mapper
 import org.mapstruct.Named
-import java.math.BigDecimal
 import java.math.BigInteger
 import java.time.Instant
 import java.time.LocalDateTime
