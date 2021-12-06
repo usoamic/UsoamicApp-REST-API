@@ -27,18 +27,21 @@ class TokenService(
     fun getTransactionByAddress(
         address: String,
         txId: BigInteger
-    ): TransactionDto {
+    ): AccountTransactionDto {
         return tokenRepository.getTransactionByAddress(
             owner = address,
             txId = txId
         )
+            .map {
+                it
+            }
             .map(tokenMapper::transactionEntityToDto)
             .blockingGet()
     }
 
     fun getTransaction(
         txId: BigInteger
-    ): AccountTransactionDto {
+    ): TransactionDto {
         return tokenRepository.getTransaction(txId)
             .map(tokenMapper::transactionToDto)
             .blockingGet()

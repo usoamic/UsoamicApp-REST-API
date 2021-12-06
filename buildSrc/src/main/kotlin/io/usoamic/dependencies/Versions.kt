@@ -5,7 +5,7 @@ object Versions {
 
     object Usoamic {
         const val kt = "1.2.3-desktop-beta.3"
-        const val commonsKtCrossPlatform = "1.2.1-desktop-beta.4"
+        const val commonsKtCrossPlatform = "1.2.1-desktop-beta.7"
         const val validateUtilKt = "1.0.1-3"
     }
 

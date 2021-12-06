@@ -38,12 +38,12 @@ interface UsoamicApi {
     fun getTransactionByAddress(
         address: String,
         txId: BigInteger
-    ): TransactionDto
+    ): AccountTransactionDto
 
     @ApiOperation("Get transaction")
     @GetMapping("/transactions/{txId}")
     @ResponseStatus(code = HttpStatus.OK)
     fun getTransaction(
         txId: BigInteger
-    ): AccountTransactionDto
+    ): TransactionDto
 }

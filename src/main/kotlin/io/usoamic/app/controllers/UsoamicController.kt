@@ -22,14 +22,14 @@ class UsoamicController(
         )
     }
 
-    override fun getTransactionByAddress(address: String, txId: BigInteger): TransactionDto {
+    override fun getTransactionByAddress(address: String, txId: BigInteger): AccountTransactionDto {
         return tokenService.getTransactionByAddress(
             address = address,
             txId = txId
         )
     }
 
-    override fun getTransaction(txId: BigInteger): AccountTransactionDto {
+    override fun getTransaction(txId: BigInteger): TransactionDto {
         return tokenService.getTransaction(
             txId = txId
         )

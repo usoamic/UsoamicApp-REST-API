@@ -31,7 +31,7 @@ interface TokenMapper {
     )
     fun transactionEntityToDto(
         entity: TransactionEntity
-    ): TransactionDto
+    ): AccountTransactionDto
 
     @Mappings(
         Mapping(
@@ -42,7 +42,7 @@ interface TokenMapper {
     )
     fun transactionToDto(
         transaction: Transaction
-    ): AccountTransactionDto
+    ): TransactionDto
 
     fun transactionTypeEntity(
         entity: TransactionTypeEntity
