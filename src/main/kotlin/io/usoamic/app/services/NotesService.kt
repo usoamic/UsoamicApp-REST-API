@@ -24,9 +24,9 @@ class NotesService(
         id: BigInteger,
         address: String
     ): NoteDto {
-        return notesRepository.getNoteForAccount(
+        return notesRepository.getNoteByAddress(
             id = id,
-            address = address
+            owner = address
         )
             .map(noteMapper::noteEntityToDto)
             .blockingGet()

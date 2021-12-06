@@ -4,13 +4,18 @@ object Versions {
     private const val KOTLIN = "1.5.21"
 
     object Usoamic {
-        const val kt = "1.3.0-beta.9"
-        const val commonsKtCrossPlatform = "1.2.0-desktop"
+        const val kt = "1.2.3-desktop-beta.3"
+        const val commonsKtCrossPlatform = "1.2.1-desktop-beta.4"
         const val validateUtilKt = "1.0.1-3"
     }
 
+    object SquareUp {
+        const val okHttp = "4.9.0"
+    }
+
     object Cryptocurrency {
-        const val web3j = "4.6.0"
+        const val web3j = "4.8.8"
+        const val springWeb3j = ""
     }
 
     object Database {

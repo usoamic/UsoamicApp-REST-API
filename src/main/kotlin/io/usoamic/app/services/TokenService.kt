@@ -28,7 +28,7 @@ class TokenService(
         address: String,
         txId: BigInteger
     ): TransactionDto {
-        return tokenRepository.getTransactionForAccount(
+        return tokenRepository.getTransactionByAddress(
             owner = address,
             txId = txId
         )

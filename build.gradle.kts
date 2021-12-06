@@ -34,7 +34,7 @@ dependencies {
     /*
      * Implementations
      */
-    implementation(Dependencies.SpringBoot.Starter.dataJpa)
+    implementation(Dependencies.SquareUp.okHttp)
     implementation(Dependencies.SpringBoot.Starter.validation)
     implementation(Dependencies.SpringBoot.Starter.web)
     implementation(Dependencies.Java.inject)

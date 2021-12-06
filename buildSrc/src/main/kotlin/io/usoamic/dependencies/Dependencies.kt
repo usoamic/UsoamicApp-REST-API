@@ -19,6 +19,10 @@ object Dependencies {
         const val devTools = "org.springframework.boot:spring-boot-devtools"
     }
 
+    object SquareUp {
+        const val okHttp = "com.squareup.okhttp3:okhttp:${Versions.SquareUp.okHttp}"
+    }
+
     object Java {
         const val inject = "javax.inject:javax.inject:1"
     }
