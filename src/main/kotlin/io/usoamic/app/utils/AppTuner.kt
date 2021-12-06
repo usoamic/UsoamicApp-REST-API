@@ -13,7 +13,7 @@ class AppTuner(
 ) {
     @PostConstruct
     fun createAccount() {
-        if (accountService.hasAccount()) {
+        if (!accountService.hasAccount()) {
             val credentials = accountService.createCredentials()
 
             accountService.addAccount(
