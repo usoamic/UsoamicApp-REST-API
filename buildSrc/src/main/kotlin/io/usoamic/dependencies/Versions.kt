@@ -4,8 +4,8 @@ object Versions {
     private const val KOTLIN = "1.5.21"
 
     object Usoamic {
-        const val kt = "1.2.3-desktop-beta.3"
-        const val commonsKtCrossPlatform = "1.2.1-desktop-beta.7"
+        const val kt = "1.2.3-desktop"
+        const val commonsKtCrossPlatform = "1.2.1-desktop"
         const val validateUtilKt = "1.0.1-3"
     }
 
@@ -15,7 +15,6 @@ object Versions {
 
     object Cryptocurrency {
         const val web3j = "4.8.8"
-        const val springWeb3j = ""
     }
 
     object Database {
