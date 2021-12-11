@@ -8,7 +8,7 @@ server:
 logging:
   file:
     path: ./
-    name: usoamicapp.log
+    name: usoamicexplorer.log
   org.hibernate: INFO
 
 usoamic:

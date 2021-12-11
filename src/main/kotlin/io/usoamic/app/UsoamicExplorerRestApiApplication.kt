@@ -14,8 +14,8 @@ import org.springframework.boot.runApplication
         HibernateJpaAutoConfiguration::class
     ]
 )
-class UsoamicAppRestApiApplication
+class UsoamicExplorerRestApiApplication
 
 fun main(args: Array<String>) {
-    runApplication<UsoamicAppRestApiApplication>(*args)
+    runApplication<UsoamicExplorerRestApiApplication>(*args)
 }

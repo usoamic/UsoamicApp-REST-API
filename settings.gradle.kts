@@ -1,1 +1,1 @@
-rootProject.name = "UsoamicApp"
+rootProject.name = "UsoamicExplorer-REST-API"
