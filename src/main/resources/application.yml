@@ -17,5 +17,5 @@ usoamic:
   wallet-password: '1234'
   date-format: 'yyyy-MM-dd HH:mm'
   node-provider: 'INFURA'
-  network-type: 'MAINNET' #'TESTNET'
+  network-type: 'MAINNET' # 'MAINNET' | 'TESTNET'
   project-id: 'fa8e5195184149f79e644292d2b31707'
